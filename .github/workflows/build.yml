@@ -26,7 +26,7 @@ jobs:
       - name: Download Kernel
         shell: bash
         run: |
-          git clone https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling-LTS.git --depth 1 -b $TAG_VERSION linux
+          git clone https://github.com/lighteningranger/WSL2-Linux-Kernel-Rolling-LTS.git --depth 1 -b $TAG_VERSION linux
 
       - name: Build Kernel
         run: |
