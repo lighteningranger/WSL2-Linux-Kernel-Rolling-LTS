@@ -26,10 +26,9 @@ CONFIG_THREAD_INFO_IN_TASK=y
 # General setup
 #
 CONFIG_INIT_ENV_ARG_LIMIT=32
-# CONFIG_COMPILE_TEST is not set
+CONFIG_COMPILE_TEST=y
 # CONFIG_WERROR is not set
 CONFIG_LOCALVERSION="-WSL2-LTS"
-# CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_BUILD_SALT=""
 CONFIG_HAVE_KERNEL_GZIP=y
 CONFIG_HAVE_KERNEL_BZIP2=y
@@ -118,7 +117,6 @@ CONFIG_BPF_JIT=y
 CONFIG_BPF_JIT_ALWAYS_ON=y
 CONFIG_BPF_JIT_DEFAULT_ON=y
 CONFIG_BPF_UNPRIV_DEFAULT_OFF=y
-# CONFIG_BPF_PRELOAD is not set
 # CONFIG_BPF_LSM is not set
 # end of BPF subsystem
 
@@ -799,7 +797,6 @@ CONFIG_MODULE_COMPRESS_NONE=y
 # CONFIG_MODULE_COMPRESS_ZSTD is not set
 # CONFIG_MODULE_ALLOW_MISSING_NAMESPACE_IMPORTS is not set
 CONFIG_MODPROBE_PATH="/sbin/modprobe"
-# CONFIG_TRIM_UNUSED_KSYMS is not set
 CONFIG_MODULES_TREE_LOOKUP=y
 CONFIG_BLOCK=y
 CONFIG_BLOCK_LEGACY_AUTOLOAD=y
@@ -1578,6 +1575,7 @@ CONFIG_BT_HCIBFUSB=m
 CONFIG_BT_HCIVHCI=m
 CONFIG_BT_MRVL=m
 CONFIG_BT_ATH3K=m
+# CONFIG_BT_QCOMSMD is not set
 CONFIG_BT_VIRTIO=m
 # end of Bluetooth device drivers
 
@@ -1652,19 +1650,44 @@ CONFIG_PCIE_BUS_DEFAULT=y
 #
 # PCI controller drivers
 #
+# CONFIG_PCIE_XILINX_NWL is not set
+# CONFIG_PCI_TEGRA is not set
+# CONFIG_PCIE_RCAR_HOST is not set
+# CONFIG_PCIE_XILINX is not set
+# CONFIG_PCIE_XILINX_CPM is not set
+# CONFIG_PCI_XGENE is not set
+# CONFIG_PCI_VERSATILE is not set
+# CONFIG_PCIE_ALTERA is not set
+# CONFIG_PCI_HOST_THUNDER_PEM is not set
+# CONFIG_PCI_HOST_THUNDER_ECAM is not set
+# CONFIG_PCIE_MEDIATEK_GEN3 is not set
 # CONFIG_VMD is not set
 CONFIG_PCI_HYPERV_INTERFACE=y
+# CONFIG_PCI_LOONGSON is not set
+# CONFIG_PCIE_MT7621 is not set
 
 #
 # DesignWare PCI Core Support
 #
 # CONFIG_PCIE_DW_PLAT_HOST is not set
+# CONFIG_PCI_EXYNOS is not set
+# CONFIG_PCI_IMX6 is not set
+# CONFIG_PCIE_SPEAR13XX is not set
+# CONFIG_PCI_KEYSTONE_HOST is not set
+# CONFIG_PCIE_ARMADA_8K is not set
+# CONFIG_PCIE_ARTPEC6_HOST is not set
+# CONFIG_PCIE_KEEMBAY_HOST is not set
+# CONFIG_PCIE_HISI_STB is not set
 # CONFIG_PCI_MESON is not set
+# CONFIG_PCIE_TEGRA194_HOST is not set
+# CONFIG_PCIE_VISCONTI_HOST is not set
+# CONFIG_PCIE_FU740 is not set
 # end of DesignWare PCI Core Support
 
 #
 # Mobiveil PCIe Core Support
 #
+# CONFIG_PCIE_LAYERSCAPE_GEN4 is not set
 # end of Mobiveil PCIe Core Support
 
 #
@@ -1727,6 +1750,12 @@ CONFIG_DMA_SHARED_BUFFER=y
 #
 # Bus devices
 #
+# CONFIG_ARM_INTEGRATOR_LM is not set
+# CONFIG_BT1_APB is not set
+# CONFIG_BT1_AXI is not set
+# CONFIG_HISILICON_LPC is not set
+# CONFIG_INTEL_IXP4XX_EB is not set
+# CONFIG_QCOM_EBI2 is not set
 # CONFIG_MHI_BUS is not set
 # CONFIG_MHI_BUS_EP is not set
 # end of Bus devices
@@ -1741,8 +1770,10 @@ CONFIG_PROC_EVENTS=y
 #
 # ARM System Control and Management Interface Protocol
 #
+# CONFIG_ARM_SCMI_PROTOCOL is not set
 # end of ARM System Control and Management Interface Protocol
 
+# CONFIG_ARM_SCPI_PROTOCOL is not set
 # CONFIG_EDD is not set
 CONFIG_FIRMWARE_MEMMAP=y
 # CONFIG_DMIID is not set
@@ -1751,6 +1782,7 @@ CONFIG_DMI_SCAN_MACHINE_NON_EFI_FALLBACK=y
 # CONFIG_ISCSI_IBFT is not set
 # CONFIG_FW_CFG_SYSFS is not set
 # CONFIG_SYSFB_SIMPLEFB is not set
+# CONFIG_BCM47XX_NVRAM is not set
 # CONFIG_GOOGLE_FIRMWARE is not set
 
 #
@@ -1791,6 +1823,7 @@ CONFIG_PNP=y
 #
 # Protocols
 #
+# CONFIG_ISAPNP is not set
 CONFIG_PNPACPI=y
 CONFIG_BLK_DEV=y
 # CONFIG_BLK_DEV_NULL_BLK is not set
@@ -1826,8 +1859,10 @@ CONFIG_VIRTIO_BLK=y
 # CONFIG_PHANTOM is not set
 # CONFIG_TIFM_CORE is not set
 # CONFIG_ICS932S401 is not set
+# CONFIG_ATMEL_SSC is not set
 # CONFIG_ENCLOSURE_SERVICES is not set
 # CONFIG_HP_ILO is not set
+# CONFIG_QCOM_COINCELL is not set
 # CONFIG_APDS9802ALS is not set
 # CONFIG_ISL29003 is not set
 # CONFIG_ISL29020 is not set
@@ -1836,6 +1871,7 @@ CONFIG_VIRTIO_BLK=y
 # CONFIG_SENSORS_APDS990X is not set
 # CONFIG_HMC6352 is not set
 # CONFIG_DS1682 is not set
+# CONFIG_PCH_PHUB is not set
 # CONFIG_SRAM is not set
 # CONFIG_DW_XDATA_PCIE is not set
 # CONFIG_PCI_ENDPOINT_TEST is not set
@@ -1858,6 +1894,7 @@ CONFIG_VIRTIO_BLK=y
 #
 # Texas Instruments shared transport line discipline
 #
+# CONFIG_TI_ST is not set
 # end of Texas Instruments shared transport line discipline
 
 # CONFIG_SENSORS_LIS3_I2C is not set
@@ -2057,6 +2094,7 @@ CONFIG_VIRTIO_NET=y
 # CONFIG_ARCNET is not set
 CONFIG_ETHERNET=y
 # CONFIG_NET_VENDOR_3COM is not set
+# CONFIG_NET_VENDOR_ACTIONS is not set
 # CONFIG_NET_VENDOR_ADAPTEC is not set
 # CONFIG_NET_VENDOR_AGERE is not set
 # CONFIG_NET_VENDOR_ALACRITECH is not set
@@ -2064,6 +2102,8 @@ CONFIG_ETHERNET=y
 # CONFIG_ALTERA_TSE is not set
 # CONFIG_NET_VENDOR_AMAZON is not set
 # CONFIG_NET_VENDOR_AMD is not set
+# CONFIG_NET_XGENE is not set
+# CONFIG_NET_XGENE_V2 is not set
 # CONFIG_NET_VENDOR_AQUANTIA is not set
 # CONFIG_NET_VENDOR_ARC is not set
 # CONFIG_NET_VENDOR_ASIX is not set
@@ -2071,8 +2111,12 @@ CONFIG_ETHERNET=y
 # CONFIG_CX_ECAT is not set
 # CONFIG_NET_VENDOR_BROADCOM is not set
 # CONFIG_NET_VENDOR_CADENCE is not set
+# CONFIG_NET_CALXEDA_XGMAC is not set
 # CONFIG_NET_VENDOR_CAVIUM is not set
 # CONFIG_NET_VENDOR_CHELSIO is not set
+CONFIG_NET_VENDOR_CIRRUS=y
+# CONFIG_CS89x0_PLATFORM is not set
+# CONFIG_EP93XX_ETH is not set
 # CONFIG_NET_VENDOR_CISCO is not set
 # CONFIG_NET_VENDOR_CORTINA is not set
 # CONFIG_NET_VENDOR_DAVICOM is not set
@@ -2082,14 +2126,33 @@ CONFIG_ETHERNET=y
 # CONFIG_NET_VENDOR_EMULEX is not set
 # CONFIG_NET_VENDOR_ENGLEDER is not set
 # CONFIG_NET_VENDOR_EZCHIP is not set
+CONFIG_NET_VENDOR_FARADAY=y
+CONFIG_NET_VENDOR_FREESCALE=y
+# CONFIG_FEC is not set
+# CONFIG_FSL_FMAN is not set
+# CONFIG_FSL_PQ_MDIO is not set
+# CONFIG_GIANFAR is not set
+# CONFIG_FSL_DPAA2_SWITCH is not set
+# CONFIG_FSL_ENETC is not set
+# CONFIG_FSL_ENETC_VF is not set
+# CONFIG_FSL_ENETC_IERB is not set
 # CONFIG_NET_VENDOR_FUNGIBLE is not set
 # CONFIG_NET_VENDOR_GOOGLE is not set
+CONFIG_NET_VENDOR_HISILICON=y
+# CONFIG_HIX5HD2_GMAC is not set
+# CONFIG_HISI_FEMAC is not set
+# CONFIG_HIP04_ETH is not set
+# CONFIG_HNS_DSAF is not set
+# CONFIG_HNS_ENET is not set
+# CONFIG_HNS3 is not set
 # CONFIG_NET_VENDOR_HUAWEI is not set
 # CONFIG_NET_VENDOR_INTEL is not set
 # CONFIG_NET_VENDOR_WANGXUN is not set
 # CONFIG_JME is not set
+# CONFIG_KORINA is not set
 # CONFIG_NET_VENDOR_LITEX is not set
 # CONFIG_NET_VENDOR_MARVELL is not set
+# CONFIG_NET_VENDOR_MEDIATEK is not set
 # CONFIG_NET_VENDOR_MELLANOX is not set
 # CONFIG_NET_VENDOR_MICREL is not set
 # CONFIG_NET_VENDOR_MICROCHIP is not set
@@ -2102,6 +2165,7 @@ CONFIG_ETHERNET=y
 # CONFIG_NET_VENDOR_NETERION is not set
 # CONFIG_NET_VENDOR_NETRONOME is not set
 # CONFIG_NET_VENDOR_NVIDIA is not set
+# CONFIG_LPC_ENET is not set
 # CONFIG_NET_VENDOR_OKI is not set
 # CONFIG_ETHOC is not set
 # CONFIG_NET_VENDOR_PACKET_ENGINES is not set
@@ -2122,6 +2186,8 @@ CONFIG_ETHERNET=y
 # CONFIG_NET_VENDOR_SOCIONEXT is not set
 # CONFIG_NET_VENDOR_STMICRO is not set
 # CONFIG_NET_VENDOR_SUN is not set
+CONFIG_NET_VENDOR_SUNPLUS=y
+# CONFIG_SP7021_EMAC is not set
 # CONFIG_NET_VENDOR_SYNOPSYS is not set
 # CONFIG_NET_VENDOR_TEHUTI is not set
 # CONFIG_NET_VENDOR_TI is not set
@@ -2246,7 +2312,9 @@ CONFIG_SERIO_RAW=y
 # CONFIG_SERIO_ALTERA_PS2 is not set
 # CONFIG_SERIO_PS2MULT is not set
 # CONFIG_SERIO_ARC_PS2 is not set
+# CONFIG_SERIO_OLPC_APSP is not set
 CONFIG_HYPERV_KEYBOARD=y
+# CONFIG_SERIO_SUN4I_PS2 is not set
 # CONFIG_USERIO is not set
 # CONFIG_GAMEPORT is not set
 # end of Hardware I/O ports
@@ -2281,29 +2349,63 @@ CONFIG_SERIAL_8250_PCI=y
 CONFIG_SERIAL_8250_NR_UARTS=32
 CONFIG_SERIAL_8250_RUNTIME_UARTS=4
 # CONFIG_SERIAL_8250_EXTENDED is not set
+# CONFIG_SERIAL_8250_FSL is not set
 # CONFIG_SERIAL_8250_DW is not set
+# CONFIG_SERIAL_8250_EM is not set
+# CONFIG_SERIAL_8250_IOC3 is not set
 # CONFIG_SERIAL_8250_RT288X is not set
+# CONFIG_SERIAL_8250_OMAP is not set
+# CONFIG_SERIAL_8250_MT6577 is not set
+# CONFIG_SERIAL_8250_UNIPHIER is not set
 # CONFIG_SERIAL_8250_LPSS is not set
 # CONFIG_SERIAL_8250_MID is not set
 # CONFIG_SERIAL_8250_PERICOM is not set
+# CONFIG_SERIAL_8250_PXA is not set
+CONFIG_SERIAL_8250_TEGRA=y
+# CONFIG_SERIAL_8250_BCM7271 is not set
 
 #
 # Non-8250 serial port support
 #
+# CONFIG_SERIAL_AMBA_PL010 is not set
+# CONFIG_SERIAL_ATMEL is not set
+# CONFIG_SERIAL_MESON is not set
+# CONFIG_SERIAL_CLPS711X is not set
+# CONFIG_SERIAL_SAMSUNG is not set
+# CONFIG_SERIAL_TEGRA is not set
+# CONFIG_SERIAL_TEGRA_TCU is not set
+# CONFIG_SERIAL_IMX is not set
 # CONFIG_SERIAL_UARTLITE is not set
+# CONFIG_SERIAL_SH_SCI is not set
 CONFIG_SERIAL_CORE=y
 CONFIG_SERIAL_CORE_CONSOLE=y
+# CONFIG_SERIAL_ICOM is not set
 # CONFIG_SERIAL_JSM is not set
+# CONFIG_SERIAL_MSM is not set
+# CONFIG_SERIAL_VT8500 is not set
+# CONFIG_SERIAL_OMAP is not set
 # CONFIG_SERIAL_LANTIQ is not set
 # CONFIG_SERIAL_SCCNXP is not set
 # CONFIG_SERIAL_SC16IS7XX is not set
+# CONFIG_SERIAL_TIMBERDALE is not set
+# CONFIG_SERIAL_BCM63XX is not set
 # CONFIG_SERIAL_ALTERA_JTAGUART is not set
 # CONFIG_SERIAL_ALTERA_UART is not set
+# CONFIG_SERIAL_PCH_UART is not set
+# CONFIG_SERIAL_MXS_AUART is not set
+# CONFIG_SERIAL_MPS2_UART is not set
 # CONFIG_SERIAL_ARC is not set
 # CONFIG_SERIAL_RP2 is not set
 # CONFIG_SERIAL_FSL_LPUART is not set
 # CONFIG_SERIAL_FSL_LINFLEXUART is not set
+# CONFIG_SERIAL_ST_ASC is not set
 # CONFIG_SERIAL_SPRD is not set
+# CONFIG_SERIAL_STM32 is not set
+# CONFIG_SERIAL_MVEBU_UART is not set
+# CONFIG_SERIAL_OWL is not set
+# CONFIG_SERIAL_RDA is not set
+# CONFIG_SERIAL_LITEUART is not set
+# CONFIG_SERIAL_SUNPLUS is not set
 # end of Serial drivers
 
 # CONFIG_SERIAL_NONSTANDARD is not set
@@ -2315,6 +2417,8 @@ CONFIG_HVC_DRIVER=y
 # CONFIG_TTY_PRINTK is not set
 CONFIG_VIRTIO_CONSOLE=y
 # CONFIG_IPMI_HANDLER is not set
+# CONFIG_ASPEED_KCS_IPMI_BMC is not set
+# CONFIG_NPCM7XX_KCS_IPMI_BMC is not set
 # CONFIG_HW_RANDOM is not set
 # CONFIG_APPLICOM is not set
 # CONFIG_MWAVE is not set
@@ -2364,6 +2468,7 @@ CONFIG_I2C_ALGOBIT=y
 # CONFIG_I2C_AMD756 is not set
 # CONFIG_I2C_AMD8111 is not set
 # CONFIG_I2C_AMD_MP2 is not set
+# CONFIG_I2C_HIX5HD2 is not set
 # CONFIG_I2C_I801 is not set
 # CONFIG_I2C_ISCH is not set
 # CONFIG_I2C_ISMT is not set
@@ -2384,13 +2489,63 @@ CONFIG_I2C_ALGOBIT=y
 #
 # I2C system bus drivers (mostly embedded / system-on-chip)
 #
+# CONFIG_I2C_ASPEED is not set
+# CONFIG_I2C_AT91 is not set
+# CONFIG_I2C_AXXIA is not set
+# CONFIG_I2C_BCM2835 is not set
+# CONFIG_I2C_BCM_IPROC is not set
+# CONFIG_I2C_BCM_KONA is not set
+CONFIG_I2C_BRCMSTB=y
+# CONFIG_I2C_CADENCE is not set
+# CONFIG_I2C_CBUS_GPIO is not set
+# CONFIG_I2C_DAVINCI is not set
 # CONFIG_I2C_DESIGNWARE_PLATFORM is not set
 # CONFIG_I2C_DESIGNWARE_PCI is not set
+# CONFIG_I2C_DIGICOLOR is not set
+# CONFIG_I2C_EG20T is not set
 # CONFIG_I2C_EMEV2 is not set
+# CONFIG_I2C_GPIO is not set
+# CONFIG_I2C_HIGHLANDER is not set
+# CONFIG_I2C_HISI is not set
+# CONFIG_I2C_IMG is not set
+# CONFIG_I2C_IMX is not set
+# CONFIG_I2C_IMX_LPI2C is not set
+# CONFIG_I2C_IOP3XX is not set
+# CONFIG_I2C_JZ4780 is not set
+# CONFIG_I2C_MESON is not set
+# CONFIG_I2C_MT65XX is not set
+# CONFIG_I2C_MT7621 is not set
+# CONFIG_I2C_MV64XXX is not set
+# CONFIG_I2C_MXS is not set
+# CONFIG_I2C_NPCM is not set
 # CONFIG_I2C_OCORES is not set
+# CONFIG_I2C_OMAP is not set
+# CONFIG_I2C_OWL is not set
+# CONFIG_I2C_APPLE is not set
 # CONFIG_I2C_PCA_PLATFORM is not set
+# CONFIG_I2C_PNX is not set
+# CONFIG_I2C_PXA is not set
+# CONFIG_I2C_QCOM_CCI is not set
+# CONFIG_I2C_QUP is not set
+# CONFIG_I2C_RIIC is not set
+# CONFIG_I2C_RZV2M is not set
+# CONFIG_I2C_S3C2410 is not set
+# CONFIG_I2C_SH_MOBILE is not set
 # CONFIG_I2C_SIMTEC is not set
+# CONFIG_I2C_SPRD is not set
+# CONFIG_I2C_ST is not set
+# CONFIG_I2C_STM32F4 is not set
+# CONFIG_I2C_STM32F7 is not set
+# CONFIG_I2C_SYNQUACER is not set
+# CONFIG_I2C_TEGRA_BPMP is not set
+# CONFIG_I2C_UNIPHIER is not set
+# CONFIG_I2C_UNIPHIER_F is not set
+# CONFIG_I2C_VERSATILE is not set
+# CONFIG_I2C_WMT is not set
+# CONFIG_I2C_THUNDERX is not set
 # CONFIG_I2C_XILINX is not set
+# CONFIG_I2C_XLP9XX is not set
+# CONFIG_I2C_RCAR is not set
 
 #
 # External I2C/SMBus adapter drivers
@@ -2439,10 +2594,13 @@ CONFIG_PPS=y
 #
 CONFIG_PTP_1588_CLOCK=y
 CONFIG_PTP_1588_CLOCK_OPTIONAL=y
+CONFIG_PTP_1588_CLOCK_DTE=y
+CONFIG_PTP_1588_CLOCK_QORIQ=y
 
 #
 # Enable PHYLIB and NETWORK_PHY_TIMESTAMPING to see the additional clocks.
 #
+# CONFIG_PTP_1588_CLOCK_PCH is not set
 # CONFIG_PTP_1588_CLOCK_IDT82P33 is not set
 # CONFIG_PTP_1588_CLOCK_IDTCM is not set
 # CONFIG_PTP_1588_CLOCK_VMW is not set
@@ -2458,6 +2616,7 @@ CONFIG_POWER_SUPPLY=y
 # CONFIG_IP5XXX_POWER is not set
 # CONFIG_TEST_POWER is not set
 # CONFIG_CHARGER_ADP5061 is not set
+# CONFIG_BATTERY_ACT8945A is not set
 # CONFIG_BATTERY_CW2015 is not set
 # CONFIG_BATTERY_DS2780 is not set
 # CONFIG_BATTERY_DS2781 is not set
@@ -2470,12 +2629,21 @@ CONFIG_POWER_SUPPLY=y
 # CONFIG_BATTERY_MAX17042 is not set
 # CONFIG_CHARGER_MAX8903 is not set
 # CONFIG_CHARGER_LP8727 is not set
+# CONFIG_CHARGER_GPIO is not set
 # CONFIG_CHARGER_LTC4162L is not set
 # CONFIG_CHARGER_MAX77976 is not set
 # CONFIG_CHARGER_BQ2415X is not set
+# CONFIG_CHARGER_BQ24257 is not set
+# CONFIG_CHARGER_BQ24735 is not set
+# CONFIG_CHARGER_BQ2515X is not set
+# CONFIG_CHARGER_BQ25890 is not set
+# CONFIG_CHARGER_BQ25980 is not set
+# CONFIG_CHARGER_BQ256XX is not set
 # CONFIG_BATTERY_GAUGE_LTC2941 is not set
 # CONFIG_BATTERY_GOLDFISH is not set
 # CONFIG_BATTERY_RT5033 is not set
+# CONFIG_CHARGER_RT9455 is not set
+# CONFIG_CHARGER_SC2731 is not set
 # CONFIG_CHARGER_BD99954 is not set
 # CONFIG_BATTERY_UG3105 is not set
 # CONFIG_HWMON is not set
@@ -2492,6 +2660,8 @@ CONFIG_THERMAL_GOV_STEP_WISE=y
 # CONFIG_THERMAL_GOV_BANG_BANG is not set
 # CONFIG_THERMAL_GOV_USER_SPACE is not set
 # CONFIG_THERMAL_EMULATION is not set
+# CONFIG_K3_THERMAL is not set
+# CONFIG_RCAR_THERMAL is not set
 
 #
 # Intel thermal drivers
@@ -2512,6 +2682,39 @@ CONFIG_X86_THERMAL_VECTOR=y
 # CONFIG_INTEL_HFI_THERMAL is not set
 # end of Intel thermal drivers
 
+#
+# Broadcom thermal drivers
+#
+# CONFIG_BRCMSTB_THERMAL is not set
+# CONFIG_BCM_NS_THERMAL is not set
+# CONFIG_BCM_SR_THERMAL is not set
+# end of Broadcom thermal drivers
+
+#
+# Texas Instruments thermal drivers
+#
+# CONFIG_TI_SOC_THERMAL is not set
+# end of Texas Instruments thermal drivers
+
+#
+# Samsung thermal drivers
+#
+# end of Samsung thermal drivers
+
+#
+# NVIDIA Tegra thermal drivers
+#
+# CONFIG_TEGRA_SOCTHERM is not set
+# CONFIG_TEGRA_BPMP_THERMAL is not set
+# CONFIG_TEGRA30_TSENSOR is not set
+# end of NVIDIA Tegra thermal drivers
+
+#
+# Qualcomm thermal drivers
+#
+# end of Qualcomm thermal drivers
+
+# CONFIG_SPRD_THERMAL is not set
 # CONFIG_WATCHDOG is not set
 CONFIG_SSB_POSSIBLE=y
 # CONFIG_SSB is not set
@@ -2521,8 +2724,12 @@ CONFIG_BCMA_POSSIBLE=y
 #
 # Multifunction device drivers
 #
+# CONFIG_MFD_CS5535 is not set
+# CONFIG_MFD_SUN4I_GPADC is not set
 # CONFIG_MFD_AS3711 is not set
 # CONFIG_PMIC_ADP5520 is not set
+# CONFIG_MFD_AAT2870_CORE is not set
+# CONFIG_MFD_AT91_USART is not set
 # CONFIG_MFD_BCM590XX is not set
 # CONFIG_MFD_BD9571MWV is not set
 # CONFIG_MFD_AXP20X_I2C is not set
@@ -2534,8 +2741,12 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_DA9063 is not set
 # CONFIG_MFD_DA9150 is not set
 # CONFIG_MFD_DLN2 is not set
+# CONFIG_MFD_ENE_KB3930 is not set
+# CONFIG_MFD_EXYNOS_LPASS is not set
 # CONFIG_MFD_MC13XXX_I2C is not set
 # CONFIG_MFD_MP2629 is not set
+# CONFIG_MFD_MXS_LRADC is not set
+# CONFIG_MFD_MX25_TSADC is not set
 # CONFIG_HTC_PASIC3 is not set
 # CONFIG_MFD_INTEL_QUARK_I2C_GPIO is not set
 # CONFIG_LPC_ICH is not set
@@ -2549,7 +2760,11 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_88PM805 is not set
 # CONFIG_MFD_88PM860X is not set
 # CONFIG_MFD_MAX14577 is not set
+# CONFIG_MFD_MAX77620 is not set
+# CONFIG_MFD_MAX77650 is not set
+# CONFIG_MFD_MAX77686 is not set
 # CONFIG_MFD_MAX77693 is not set
+# CONFIG_MFD_MAX77714 is not set
 # CONFIG_MFD_MAX77843 is not set
 # CONFIG_MFD_MAX8907 is not set
 # CONFIG_MFD_MAX8925 is not set
@@ -2560,17 +2775,23 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_MT6397 is not set
 # CONFIG_MFD_MENF21BMC is not set
 # CONFIG_MFD_VIPERBOARD is not set
+# CONFIG_MFD_NTXEC is not set
 # CONFIG_MFD_RETU is not set
 # CONFIG_MFD_PCF50633 is not set
+# CONFIG_MFD_PM8XXX is not set
 # CONFIG_MFD_SY7636A is not set
 # CONFIG_MFD_RDC321X is not set
 # CONFIG_MFD_RT4831 is not set
 # CONFIG_MFD_RT5033 is not set
 # CONFIG_MFD_RT5120 is not set
 # CONFIG_MFD_RC5T583 is not set
+# CONFIG_MFD_SEC_CORE is not set
 # CONFIG_MFD_SI476X_CORE is not set
+# CONFIG_MFD_SL28CPLD is not set
 # CONFIG_MFD_SM501 is not set
 # CONFIG_MFD_SKY81452 is not set
+# CONFIG_ABX500_CORE is not set
+# CONFIG_MFD_SUN6I_PRCM is not set
 # CONFIG_MFD_SYSCON is not set
 # CONFIG_MFD_TI_AM335X_TSCADC is not set
 # CONFIG_MFD_LP3943 is not set
@@ -2583,6 +2804,7 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_TPS65090 is not set
 # CONFIG_MFD_TI_LP873X is not set
 # CONFIG_MFD_TPS6586X is not set
+# CONFIG_MFD_TPS65910 is not set
 # CONFIG_MFD_TPS65912_I2C is not set
 # CONFIG_TWL4030_CORE is not set
 # CONFIG_TWL6040_CORE is not set
@@ -2595,7 +2817,13 @@ CONFIG_BCMA_POSSIBLE=y
 # CONFIG_MFD_WM831X_I2C is not set
 # CONFIG_MFD_WM8350_I2C is not set
 # CONFIG_MFD_WM8994 is not set
+# CONFIG_MFD_STW481X is not set
+# CONFIG_MFD_STM32_LPTIMER is not set
+# CONFIG_MFD_STM32_TIMERS is not set
+# CONFIG_MFD_STMFX is not set
 # CONFIG_MFD_ATC260X_I2C is not set
+# CONFIG_MFD_KHADAS_MCU is not set
+# CONFIG_MFD_ACER_A500_EC is not set
 # end of Multifunction device drivers
 
 # CONFIG_REGULATOR is not set
@@ -2614,6 +2842,7 @@ CONFIG_BCMA_POSSIBLE=y
 #
 # CONFIG_AGP is not set
 # CONFIG_VGA_SWITCHEROO is not set
+# CONFIG_IMX_IPUV3_CORE is not set
 CONFIG_DRM=y
 # CONFIG_DRM_DEBUG_MM is not set
 # CONFIG_DRM_DEBUG_MODESET_LOCK is not set
@@ -2629,6 +2858,7 @@ CONFIG_DRM_GEM_SHMEM_HELPER=y
 # CONFIG_DRM_AMDGPU is not set
 # CONFIG_DRM_NOUVEAU is not set
 # CONFIG_DRM_I915 is not set
+# CONFIG_DRM_KMB_DISPLAY is not set
 CONFIG_DRM_VGEM=y
 # CONFIG_DRM_VKMS is not set
 # CONFIG_DRM_VMWGFX is not set
@@ -2636,8 +2866,10 @@ CONFIG_DRM_VGEM=y
 # CONFIG_DRM_UDL is not set
 # CONFIG_DRM_AST is not set
 # CONFIG_DRM_MGAG200 is not set
+# CONFIG_DRM_SUN4I is not set
 # CONFIG_DRM_QXL is not set
 # CONFIG_DRM_VIRTIO_GPU is not set
+# CONFIG_DRM_MSM is not set
 CONFIG_DRM_PANEL=y
 
 #
@@ -2654,12 +2886,17 @@ CONFIG_DRM_PANEL_BRIDGE=y
 # CONFIG_DRM_ANALOGIX_ANX78XX is not set
 # end of Display Interface Bridges
 
+# CONFIG_DRM_V3D is not set
 # CONFIG_DRM_ETNAVIV is not set
+# CONFIG_DRM_HISI_HIBMC is not set
+# CONFIG_DRM_LOGICVC is not set
 # CONFIG_DRM_BOCHS is not set
 # CONFIG_DRM_CIRRUS_QEMU is not set
 # CONFIG_DRM_GM12U320 is not set
 # CONFIG_DRM_SIMPLEDRM is not set
+# CONFIG_DRM_PL111 is not set
 # CONFIG_DRM_VBOXVIDEO is not set
+# CONFIG_DRM_PANFROST is not set
 # CONFIG_DRM_GUD is not set
 # CONFIG_DRM_SSD130X is not set
 # CONFIG_DRM_HYPERV is not set
@@ -2672,6 +2909,7 @@ CONFIG_DRM_NOMODESET=y
 #
 CONFIG_FB_CMDLINE=y
 # CONFIG_FB is not set
+# CONFIG_MMP_DISP is not set
 # end of Frame buffer Devices
 
 #
@@ -2845,9 +3083,11 @@ CONFIG_USB_AUTOSUSPEND_DELAY=2
 #
 # CONFIG_USB_C67X00_HCD is not set
 # CONFIG_USB_XHCI_HCD is not set
+# CONFIG_USB_BRCMSTB is not set
 # CONFIG_USB_EHCI_HCD is not set
 # CONFIG_USB_OXU210HP_HCD is not set
 # CONFIG_USB_ISP116X_HCD is not set
+# CONFIG_USB_ISP1362_HCD is not set
 # CONFIG_USB_FOTG210_HCD is not set
 # CONFIG_USB_OHCI_HCD is not set
 # CONFIG_USB_SL811_HCD is not set
@@ -2883,6 +3123,7 @@ CONFIG_USBIP_VHCI_NR_HCS=1
 # CONFIG_USBIP_HOST is not set
 # CONFIG_USBIP_DEBUG is not set
 # CONFIG_USB_CDNS_SUPPORT is not set
+# CONFIG_USB_MTU3 is not set
 # CONFIG_USB_MUSB_HDRC is not set
 # CONFIG_USB_DWC3 is not set
 # CONFIG_USB_DWC2 is not set
@@ -2960,6 +3201,7 @@ CONFIG_USB_SERIAL_FTDI_SIO=y
 # CONFIG_USB_IDMOUSE is not set
 # CONFIG_USB_FTDI_ELAN is not set
 # CONFIG_USB_APPLEDISPLAY is not set
+# CONFIG_USB_QCOM_EUD is not set
 # CONFIG_APPLE_MFI_FASTCHARGE is not set
 # CONFIG_USB_LD is not set
 # CONFIG_USB_TRANCEVIBRATOR is not set
@@ -2973,12 +3215,18 @@ CONFIG_USB_SERIAL_FTDI_SIO=y
 # CONFIG_USB_HSIC_USB3503 is not set
 # CONFIG_USB_HSIC_USB4604 is not set
 # CONFIG_USB_LINK_LAYER_TEST is not set
+# CONFIG_BRCM_USB_PINMAP is not set
+# CONFIG_USB_ONBOARD_HUB is not set
 
 #
 # USB Physical Layer drivers
 #
 # CONFIG_NOP_USB_XCEIV is not set
+# CONFIG_USB_GPIO_VBUS is not set
 # CONFIG_USB_ISP1301 is not set
+# CONFIG_USB_TEGRA_PHY is not set
+# CONFIG_USB_ULPI is not set
+# CONFIG_JZ4770_PHY is not set
 # end of USB Physical Layer drivers
 
 # CONFIG_USB_GADGET is not set
@@ -3018,13 +3266,17 @@ CONFIG_RTC_INTF_DEV_UIE_EMUL=y
 # CONFIG_RTC_DRV_ABB5ZES3 is not set
 # CONFIG_RTC_DRV_ABEOZ9 is not set
 # CONFIG_RTC_DRV_ABX80X is not set
+# CONFIG_RTC_DRV_BRCMSTB is not set
 # CONFIG_RTC_DRV_DS1307 is not set
 # CONFIG_RTC_DRV_DS1374 is not set
 # CONFIG_RTC_DRV_DS1672 is not set
 # CONFIG_RTC_DRV_MAX6900 is not set
+# CONFIG_RTC_DRV_MAX8907 is not set
+# CONFIG_RTC_DRV_MAX77686 is not set
 # CONFIG_RTC_DRV_RS5C372 is not set
 # CONFIG_RTC_DRV_ISL1208 is not set
 # CONFIG_RTC_DRV_ISL12022 is not set
+# CONFIG_RTC_DRV_ISL12026 is not set
 # CONFIG_RTC_DRV_X1205 is not set
 # CONFIG_RTC_DRV_PCF8523 is not set
 # CONFIG_RTC_DRV_PCF85063 is not set
@@ -3042,6 +3294,7 @@ CONFIG_RTC_INTF_DEV_UIE_EMUL=y
 # CONFIG_RTC_DRV_RV3028 is not set
 # CONFIG_RTC_DRV_RV3032 is not set
 # CONFIG_RTC_DRV_RV8803 is not set
+# CONFIG_RTC_DRV_S5M is not set
 # CONFIG_RTC_DRV_SD3078 is not set
 
 #
@@ -3075,16 +3328,45 @@ CONFIG_RTC_DRV_CMOS=y
 # CONFIG_RTC_DRV_BQ4802 is not set
 # CONFIG_RTC_DRV_RP5C01 is not set
 # CONFIG_RTC_DRV_V3020 is not set
+# CONFIG_RTC_DRV_GAMECUBE is not set
+# CONFIG_RTC_DRV_SC27XX is not set
+CONFIG_RTC_DRV_SPEAR=y
 
 #
 # on-CPU RTC drivers
 #
+# CONFIG_RTC_DRV_ASM9260 is not set
+# CONFIG_RTC_DRV_DAVINCI is not set
+# CONFIG_RTC_DRV_DIGICOLOR is not set
+# CONFIG_RTC_DRV_FSL_FTM_ALARM is not set
+# CONFIG_RTC_DRV_MESON is not set
+# CONFIG_RTC_DRV_MESON_VRTC is not set
+# CONFIG_RTC_DRV_S3C is not set
+# CONFIG_RTC_DRV_EP93XX is not set
+# CONFIG_RTC_DRV_GENERIC is not set
+# CONFIG_RTC_DRV_VT8500 is not set
+# CONFIG_RTC_DRV_SUN6I is not set
+# CONFIG_RTC_DRV_SUNXI is not set
+# CONFIG_RTC_DRV_MV is not set
 # CONFIG_RTC_DRV_FTRTC010 is not set
+# CONFIG_RTC_DRV_STMP is not set
+# CONFIG_RTC_DRV_LPC32XX is not set
+# CONFIG_RTC_DRV_PM8XXX is not set
+# CONFIG_RTC_DRV_TEGRA is not set
+# CONFIG_RTC_DRV_MOXART is not set
+# CONFIG_RTC_DRV_MT2712 is not set
+# CONFIG_RTC_DRV_MT6397 is not set
+# CONFIG_RTC_DRV_MT7622 is not set
+# CONFIG_RTC_DRV_XGENE is not set
+# CONFIG_RTC_DRV_STM32 is not set
+# CONFIG_RTC_DRV_RTD119X is not set
+# CONFIG_RTC_DRV_TI_K3 is not set
 
 #
 # HID Sensor RTC drivers
 #
 # CONFIG_RTC_DRV_GOLDFISH is not set
+# CONFIG_RTC_DRV_MSC313 is not set
 # CONFIG_DMADEVICES is not set
 
 #
@@ -3121,6 +3403,7 @@ CONFIG_VFIO_PCI_MMAP=y
 CONFIG_VFIO_PCI_INTX=y
 CONFIG_VFIO_PCI=y
 # CONFIG_VFIO_PCI_IGD is not set
+# CONFIG_VFIO_PLATFORM is not set
 CONFIG_VFIO_MDEV=y
 CONFIG_IRQ_BYPASS_MANAGER=y
 # CONFIG_VIRT_DRIVERS is not set
@@ -3164,19 +3447,142 @@ CONFIG_DXGKRNL=y
 # CONFIG_STAGING is not set
 # CONFIG_CHROME_PLATFORMS is not set
 # CONFIG_MELLANOX_PLATFORM is not set
+# CONFIG_OLPC_XO175 is not set
 # CONFIG_SURFACE_PLATFORMS is not set
 # CONFIG_X86_PLATFORM_DEVICES is not set
 # CONFIG_P2SB is not set
 CONFIG_HAVE_CLK=y
 CONFIG_HAVE_CLK_PREPARE=y
 CONFIG_COMMON_CLK=y
+
+#
+# Clock driver for ARM Reference designs
+#
+# CONFIG_CLK_ICST is not set
+# CONFIG_CLK_SP810 is not set
+# end of Clock driver for ARM Reference designs
+
+# CONFIG_CLK_HSDK is not set
+# CONFIG_COMMON_CLK_APPLE_NCO is not set
+# CONFIG_COMMON_CLK_MAX77686 is not set
 # CONFIG_COMMON_CLK_MAX9485 is not set
+# CONFIG_COMMON_CLK_HI655X is not set
+# CONFIG_COMMON_CLK_SCMI is not set
+# CONFIG_COMMON_CLK_SCPI is not set
 # CONFIG_COMMON_CLK_SI5341 is not set
 # CONFIG_COMMON_CLK_SI5351 is not set
 # CONFIG_COMMON_CLK_SI544 is not set
+# CONFIG_COMMON_CLK_BM1880 is not set
 # CONFIG_COMMON_CLK_CDCE706 is not set
+# CONFIG_COMMON_CLK_TPS68470 is not set
 # CONFIG_COMMON_CLK_CS2000_CP is not set
+# CONFIG_COMMON_CLK_FSL_FLEXSPI is not set
+# CONFIG_COMMON_CLK_FSL_SAI is not set
+# CONFIG_COMMON_CLK_GEMINI is not set
+# CONFIG_COMMON_CLK_ASPEED is not set
+# CONFIG_COMMON_CLK_S2MPS11 is not set
+# CONFIG_CLK_LS1028A_PLLDIG is not set
+# CONFIG_COMMON_CLK_XGENE is not set
+# CONFIG_COMMON_CLK_OXNAS is not set
+# CONFIG_COMMON_CLK_MMP2_AUDIO is not set
+# CONFIG_CLK_ACTIONS is not set
+# CONFIG_CLK_BAIKAL_T1 is not set
+# CONFIG_CLK_BCM2711_DVP is not set
+# CONFIG_CLK_BCM2835 is not set
+# CONFIG_CLK_BCM_63XX is not set
+# CONFIG_CLK_BCM_63XX_GATE is not set
+# CONFIG_CLK_BCM_KONA is not set
+# CONFIG_CLK_BCM_CYGNUS is not set
+# CONFIG_CLK_BCM_HR2 is not set
+# CONFIG_CLK_BCM_NSP is not set
+# CONFIG_CLK_BCM_NS2 is not set
+# CONFIG_CLK_BCM_SR is not set
+# CONFIG_CLK_RASPBERRYPI is not set
+# CONFIG_COMMON_CLK_HI3516CV300 is not set
+# CONFIG_COMMON_CLK_HI3519 is not set
+# CONFIG_COMMON_CLK_HI3559A is not set
+# CONFIG_COMMON_CLK_HI3660 is not set
+# CONFIG_COMMON_CLK_HI3670 is not set
+# CONFIG_COMMON_CLK_HI3798CV200 is not set
+# CONFIG_COMMON_CLK_HI6220 is not set
+# CONFIG_RESET_HISI is not set
+# CONFIG_STUB_CLK_HI6220 is not set
+# CONFIG_STUB_CLK_HI3660 is not set
+# CONFIG_COMMON_CLK_BOSTON is not set
+# CONFIG_MXC_CLK is not set
+# CONFIG_CLK_IMX8MM is not set
+# CONFIG_CLK_IMX8MN is not set
+# CONFIG_CLK_IMX8MP is not set
+# CONFIG_CLK_IMX8MQ is not set
+# CONFIG_CLK_IMX8ULP is not set
+# CONFIG_CLK_IMX93 is not set
+
+#
+# Ingenic SoCs drivers
+#
+# CONFIG_INGENIC_CGU_JZ4740 is not set
+# CONFIG_INGENIC_CGU_JZ4725B is not set
+# CONFIG_INGENIC_CGU_JZ4760 is not set
+# CONFIG_INGENIC_CGU_JZ4770 is not set
+# CONFIG_INGENIC_CGU_JZ4780 is not set
+# CONFIG_INGENIC_CGU_X1000 is not set
+# CONFIG_INGENIC_CGU_X1830 is not set
+# CONFIG_INGENIC_TCU_CLK is not set
+# end of Ingenic SoCs drivers
+
+# CONFIG_TI_SYSCON_CLK is not set
+
+#
+# Clock driver for MediaTek SoC
+#
+# CONFIG_COMMON_CLK_MT2701 is not set
+# CONFIG_COMMON_CLK_MT2712 is not set
+# CONFIG_COMMON_CLK_MT6765 is not set
+# CONFIG_COMMON_CLK_MT6779 is not set
+# CONFIG_COMMON_CLK_MT6795 is not set
+# CONFIG_COMMON_CLK_MT6797 is not set
+# CONFIG_COMMON_CLK_MT7622 is not set
+# CONFIG_COMMON_CLK_MT7629 is not set
+# CONFIG_COMMON_CLK_MT7986 is not set
+# CONFIG_COMMON_CLK_MT8135 is not set
+# CONFIG_COMMON_CLK_MT8167 is not set
+# CONFIG_COMMON_CLK_MT8173 is not set
+# CONFIG_COMMON_CLK_MT8183 is not set
+# CONFIG_COMMON_CLK_MT8186 is not set
+# CONFIG_COMMON_CLK_MT8192 is not set
+# CONFIG_COMMON_CLK_MT8195 is not set
+# CONFIG_COMMON_CLK_MT8365 is not set
+# CONFIG_COMMON_CLK_MT8516 is not set
+# end of Clock driver for MediaTek SoC
+
+#
+# Clock support for Amlogic platforms
+#
+# end of Clock support for Amlogic platforms
+
+# CONFIG_MSTAR_MSC313_MPLL is not set
+# CONFIG_MCHP_CLK_MPFS is not set
+# CONFIG_COMMON_CLK_PISTACHIO is not set
+# CONFIG_CLK_MT7621 is not set
+# CONFIG_CLK_RENESAS is not set
+# CONFIG_COMMON_CLK_SAMSUNG is not set
+# CONFIG_S3C2410_COMMON_CLK is not set
+# CONFIG_S3C2412_COMMON_CLK is not set
+# CONFIG_S3C2443_COMMON_CLK is not set
+# CONFIG_CLK_SIFIVE is not set
+# CONFIG_CLK_INTEL_SOCFPGA is not set
+# CONFIG_SPRD_COMMON_CLK is not set
+# CONFIG_CLK_STARFIVE_JH7100 is not set
+CONFIG_CLK_SUNXI=y
+CONFIG_CLK_SUNXI_CLOCKS=y
+CONFIG_CLK_SUNXI_PRCM_SUN6I=y
+CONFIG_CLK_SUNXI_PRCM_SUN8I=y
+CONFIG_CLK_SUNXI_PRCM_SUN9I=y
+# CONFIG_SUNXI_CCU is not set
+# CONFIG_COMMON_CLK_TI_ADPLL is not set
+# CONFIG_COMMON_CLK_VISCONTI is not set
 # CONFIG_XILINX_VCU is not set
+# CONFIG_COMMON_CLK_ZYNQMP is not set
 # CONFIG_HWSPINLOCK is not set
 
 #
@@ -3185,11 +3591,69 @@ CONFIG_COMMON_CLK=y
 CONFIG_CLKEVT_I8253=y
 CONFIG_I8253_LOCK=y
 CONFIG_CLKBLD_I8253=y
+# CONFIG_BCM2835_TIMER is not set
+# CONFIG_BCM_KONA_TIMER is not set
+# CONFIG_DAVINCI_TIMER is not set
+# CONFIG_DIGICOLOR_TIMER is not set
+# CONFIG_OMAP_DM_TIMER is not set
+# CONFIG_DW_APB_TIMER is not set
+# CONFIG_FTTMR010_TIMER is not set
+# CONFIG_IXP4XX_TIMER is not set
+# CONFIG_MESON6_TIMER is not set
+# CONFIG_OWL_TIMER is not set
+# CONFIG_RDA_TIMER is not set
+# CONFIG_SUN4I_TIMER is not set
+# CONFIG_SUN5I_HSTIMER is not set
+# CONFIG_TEGRA_TIMER is not set
+# CONFIG_VT8500_TIMER is not set
+# CONFIG_NPCM7XX_TIMER is not set
+# CONFIG_CADENCE_TTC_TIMER is not set
+# CONFIG_ASM9260_TIMER is not set
+# CONFIG_CLKSRC_DBX500_PRCMU is not set
+# CONFIG_CLPS711X_TIMER is not set
+# CONFIG_MXS_TIMER is not set
+# CONFIG_NSPIRE_TIMER is not set
+# CONFIG_INTEGRATOR_AP_TIMER is not set
+# CONFIG_CLKSRC_PISTACHIO is not set
+# CONFIG_CLKSRC_STM32_LP is not set
+# CONFIG_ARMV7M_SYSTICK is not set
+# CONFIG_ATMEL_PIT is not set
+# CONFIG_ATMEL_ST is not set
+# CONFIG_CLKSRC_SAMSUNG_PWM is not set
+# CONFIG_FSL_FTM_TIMER is not set
+# CONFIG_OXNAS_RPS_TIMER is not set
+# CONFIG_MTK_TIMER is not set
+# CONFIG_SPRD_TIMER is not set
+# CONFIG_SH_TIMER_CMT is not set
+# CONFIG_SH_TIMER_MTU2 is not set
+# CONFIG_RENESAS_OSTM is not set
+# CONFIG_SH_TIMER_TMU is not set
+# CONFIG_EM_TIMER_STI is not set
+# CONFIG_CLKSRC_PXA is not set
+# CONFIG_TIMER_IMX_SYS_CTR is not set
+# CONFIG_CLKSRC_ST_LPC is not set
+# CONFIG_GXP_TIMER is not set
+# CONFIG_MSC313E_TIMER is not set
+# CONFIG_INGENIC_TIMER is not set
+# CONFIG_INGENIC_SYSOST is not set
+# CONFIG_INGENIC_OST is not set
+# CONFIG_MICROCHIP_PIT64B is not set
 # end of Clock Source drivers
 
 CONFIG_MAILBOX=y
+# CONFIG_IMX_MBOX is not set
+# CONFIG_ROCKCHIP_MBOX is not set
 CONFIG_PCC=y
 # CONFIG_ALTERA_MBOX is not set
+# CONFIG_POLARFIRE_SOC_MAILBOX is not set
+# CONFIG_QCOM_APCS_IPC is not set
+# CONFIG_BCM_PDC_MBOX is not set
+# CONFIG_STM32_IPCC is not set
+# CONFIG_MTK_ADSP_MBOX is not set
+# CONFIG_MTK_CMDQ_MBOX is not set
+# CONFIG_SUN6I_MSGBOX is not set
+# CONFIG_SPRD_MBOX is not set
+# CONFIG_QCOM_IPCC is not set
 CONFIG_IOMMU_IOVA=y
 CONFIG_IOASID=y
 CONFIG_IOMMU_API=y
@@ -3199,6 +3663,9 @@ CONFIG_IOMMU_SUPPORT=y
 # Generic IOMMU Pagetable Support
 #
 CONFIG_IOMMU_IO_PGTABLE=y
+# CONFIG_IOMMU_IO_PGTABLE_LPAE is not set
+# CONFIG_IOMMU_IO_PGTABLE_ARMV7S is not set
+# CONFIG_IOMMU_IO_PGTABLE_DART is not set
 # end of Generic IOMMU Pagetable Support
 
 # CONFIG_IOMMU_DEBUGFS is not set
@@ -3215,8 +3682,20 @@ CONFIG_INTEL_IOMMU=y
 CONFIG_INTEL_IOMMU_FLOPPY_WA=y
 # CONFIG_INTEL_IOMMU_SCALABLE_MODE_DEFAULT_ON is not set
 # CONFIG_IRQ_REMAP is not set
+# CONFIG_OMAP_IOMMU is not set
+# CONFIG_ROCKCHIP_IOMMU is not set
+# CONFIG_SUN50I_IOMMU is not set
+# CONFIG_EXYNOS_IOMMU is not set
+# CONFIG_IPMMU_VMSA is not set
+# CONFIG_APPLE_DART is not set
+# CONFIG_ARM_SMMU is not set
+# CONFIG_S390_CCW_IOMMU is not set
+# CONFIG_S390_AP_IOMMU is not set
+# CONFIG_MTK_IOMMU is not set
+# CONFIG_QCOM_IOMMU is not set
 # CONFIG_HYPERV_IOMMU is not set
 # CONFIG_VIRTIO_IOMMU is not set
+# CONFIG_SPRD_IOMMU is not set
 
 #
 # Remoteproc drivers
@@ -3240,11 +3719,37 @@ CONFIG_INTEL_IOMMU_FLOPPY_WA=y
 #
 # Amlogic SoC drivers
 #
+# CONFIG_MESON_CANVAS is not set
+# CONFIG_MESON_CLK_MEASURE is not set
+# CONFIG_MESON_GX_SOCINFO is not set
+# CONFIG_MESON_MX_SOCINFO is not set
 # end of Amlogic SoC drivers
+
+#
+# Apple SoC drivers
+#
+# CONFIG_APPLE_RTKIT is not set
+# CONFIG_APPLE_SART is not set
+# end of Apple SoC drivers
+
+#
+# ASPEED SoC drivers
+#
+# CONFIG_ASPEED_LPC_CTRL is not set
+# CONFIG_ASPEED_LPC_SNOOP is not set
+# CONFIG_ASPEED_UART_ROUTING is not set
+# CONFIG_ASPEED_P2A_CTRL is not set
+# CONFIG_ASPEED_SOCINFO is not set
+# end of ASPEED SoC drivers
+
+# CONFIG_AT91_SOC_ID is not set
+# CONFIG_AT91_SOC_SFR is not set
 
 #
 # Broadcom SoC drivers
 #
+# CONFIG_SOC_BCM63XX is not set
+# CONFIG_SOC_BRCMSTB is not set
 # end of Broadcom SoC drivers
 
 #
@@ -3260,19 +3765,48 @@ CONFIG_INTEL_IOMMU_FLOPPY_WA=y
 #
 # i.MX SoC drivers
 #
+# CONFIG_SOC_IMX8M is not set
+# CONFIG_SOC_IMX9 is not set
 # end of i.MX SoC drivers
+
+#
+# IXP4xx SoC drivers
+#
+# CONFIG_IXP4XX_QMGR is not set
+# CONFIG_IXP4XX_NPE is not set
+# end of IXP4xx SoC drivers
 
 #
 # Enable LiteX SoC Builder specific drivers
 #
+# CONFIG_LITEX_SOC_CONTROLLER is not set
 # end of Enable LiteX SoC Builder specific drivers
+
+#
+# MediaTek SoC drivers
+#
+# CONFIG_MTK_CMDQ is not set
+# CONFIG_MTK_DEVAPC is not set
+# CONFIG_MTK_INFRACFG is not set
+# CONFIG_MTK_MMSYS is not set
+# end of MediaTek SoC drivers
 
 #
 # Qualcomm SoC drivers
 #
+# CONFIG_QCOM_GENI_SE is not set
+# CONFIG_QCOM_GSBI is not set
+# CONFIG_QCOM_LLCC is not set
+# CONFIG_QCOM_RPMH is not set
+# CONFIG_QCOM_SPM is not set
+# CONFIG_QCOM_ICC_BWMON is not set
 # end of Qualcomm SoC drivers
 
+# CONFIG_SOC_RENESAS is not set
+# CONFIG_ROCKCHIP_GRF is not set
+# CONFIG_SOC_SAMSUNG is not set
 # CONFIG_SOC_TI is not set
+# CONFIG_UX500_SOC_ID is not set
 
 #
 # Xilinx SoC drivers
@@ -3290,6 +3824,22 @@ CONFIG_INTEL_IOMMU_FLOPPY_WA=y
 #
 # IRQ chip support
 #
+# CONFIG_AL_FIC is not set
+# CONFIG_RENESAS_INTC_IRQPIN is not set
+# CONFIG_RENESAS_IRQC is not set
+# CONFIG_RENESAS_RZA1_IRQC is not set
+# CONFIG_RENESAS_RZG2L_IRQC is not set
+# CONFIG_SL28CPLD_INTC is not set
+# CONFIG_TS4800_IRQ is not set
+# CONFIG_INGENIC_TCU_IRQ is not set
+# CONFIG_IRQ_UNIPHIER_AIDET is not set
+# CONFIG_MESON_IRQ_GPIO is not set
+# CONFIG_IMX_IRQSTEER is not set
+# CONFIG_IMX_INTMUX is not set
+# CONFIG_EXYNOS_IRQ_COMBINER is not set
+# CONFIG_MST_IRQ is not set
+# CONFIG_MCHP_EIC is not set
+# CONFIG_SUNPLUS_SP7021_INTC is not set
 # end of IRQ chip support
 
 # CONFIG_IPACK_BUS is not set
@@ -3299,18 +3849,49 @@ CONFIG_INTEL_IOMMU_FLOPPY_WA=y
 # PHY Subsystem
 #
 CONFIG_GENERIC_PHY=y
+# CONFIG_PHY_PISTACHIO_USB is not set
 # CONFIG_USB_LGM_PHY is not set
 # CONFIG_PHY_CAN_TRANSCEIVER is not set
 
 #
 # PHY drivers for Broadcom platforms
 #
+# CONFIG_PHY_BCM63XX_USBH is not set
 # CONFIG_BCM_KONA_USB2_PHY is not set
 # end of PHY drivers for Broadcom platforms
 
+# CONFIG_PHY_HI6220_USB is not set
+# CONFIG_PHY_HI3660_USB is not set
+# CONFIG_PHY_HI3670_USB is not set
+# CONFIG_PHY_HI3670_PCIE is not set
+# CONFIG_PHY_HISTB_COMBPHY is not set
+# CONFIG_PHY_HISI_INNO_USB2 is not set
+# CONFIG_PHY_INGENIC_USB is not set
 # CONFIG_PHY_PXA_28NM_HSIC is not set
 # CONFIG_PHY_PXA_28NM_USB2 is not set
+# CONFIG_PHY_PXA_USB is not set
+# CONFIG_PHY_MMP3_USB is not set
+# CONFIG_PHY_MMP3_HSIC is not set
+# CONFIG_PHY_MT7621_PCI is not set
+# CONFIG_PHY_RALINK_USB is not set
+# CONFIG_PHY_RCAR_GEN3_USB3 is not set
+# CONFIG_PHY_ROCKCHIP_DPHY_RX0 is not set
+# CONFIG_PHY_ROCKCHIP_PCIE is not set
+# CONFIG_PHY_ROCKCHIP_SNPS_PCIE3 is not set
+# CONFIG_PHY_EXYNOS_MIPI_VIDEO is not set
+# CONFIG_PHY_SAMSUNG_USB2 is not set
+# CONFIG_PHY_ST_SPEAR1310_MIPHY is not set
+# CONFIG_PHY_ST_SPEAR1340_MIPHY is not set
+# CONFIG_PHY_STM32_USBPHYC is not set
+# CONFIG_PHY_TEGRA194_P2U is not set
+# CONFIG_PHY_DA8XX_USB is not set
+# CONFIG_PHY_DM816X_USB is not set
+# CONFIG_OMAP_CONTROL_PHY is not set
+# CONFIG_TI_PIPE3 is not set
+# CONFIG_PHY_INTEL_KEEMBAY_EMMC is not set
+# CONFIG_PHY_INTEL_KEEMBAY_USB is not set
 # CONFIG_PHY_INTEL_LGM_EMMC is not set
+# CONFIG_PHY_XILINX_ZYNQMP is not set
 # end of PHY Subsystem
 
 # CONFIG_POWERCAP is not set
@@ -3319,6 +3900,16 @@ CONFIG_GENERIC_PHY=y
 #
 # Performance monitor support
 #
+# CONFIG_ARM_CCN is not set
+# CONFIG_ARM_CMN is not set
+# CONFIG_ARM_SMMU_V3_PMU is not set
+# CONFIG_FSL_IMX8_DDR_PMU is not set
+# CONFIG_XGENE_PMU is not set
+# CONFIG_ARM_DMC620_PMU is not set
+# CONFIG_MARVELL_CN10K_TAD_PMU is not set
+# CONFIG_ALIBABA_UNCORE_DRW_PMU is not set
+# CONFIG_HNS3_PMU is not set
+# CONFIG_MARVELL_CN10K_DDR_PMU is not set
 # end of Performance monitor support
 
 CONFIG_RAS=y
@@ -3338,19 +3929,45 @@ CONFIG_BTT=y
 CONFIG_ND_PFN=y
 CONFIG_NVDIMM_PFN=y
 CONFIG_NVDIMM_DAX=y
+CONFIG_NVDIMM_TEST_BUILD=m
 CONFIG_DAX=y
 CONFIG_DEV_DAX=y
 CONFIG_DEV_DAX_PMEM=y
 CONFIG_DEV_DAX_KMEM=y
 CONFIG_NVMEM=y
 # CONFIG_NVMEM_SYSFS is not set
+# CONFIG_NVMEM_APPLE_EFUSES is not set
+# CONFIG_NVMEM_BCM_OCOTP is not set
+# CONFIG_NVMEM_BRCM_NVRAM is not set
+# CONFIG_NVMEM_IMX_IIM is not set
+# CONFIG_NVMEM_IMX_OCOTP is not set
+# CONFIG_NVMEM_LAN9662_OTPC is not set
+# CONFIG_NVMEM_LAYERSCAPE_SFP is not set
+# CONFIG_NVMEM_LPC18XX_EEPROM is not set
+# CONFIG_NVMEM_LPC18XX_OTP is not set
+# CONFIG_NVMEM_MESON_MX_EFUSE is not set
+# CONFIG_NVMEM_MICROCHIP_OTPC is not set
+# CONFIG_NVMEM_MTK_EFUSE is not set
+# CONFIG_NVMEM_MXS_OCOTP is not set
+# CONFIG_NVMEM_NINTENDO_OTP is not set
+# CONFIG_NVMEM_QCOM_QFPROM is not set
 # CONFIG_NVMEM_RMEM is not set
+# CONFIG_NVMEM_ROCKCHIP_EFUSE is not set
+# CONFIG_NVMEM_ROCKCHIP_OTP is not set
+# CONFIG_NVMEM_SC27XX_EFUSE is not set
+# CONFIG_NVMEM_SNVS_LPGPR is not set
+# CONFIG_NVMEM_SPRD_EFUSE is not set
+# CONFIG_NVMEM_STM32_ROMEM is not set
+# CONFIG_NVMEM_SUNPLUS_OCOTP is not set
+# CONFIG_NVMEM_UNIPHIER_EFUSE is not set
+# CONFIG_NVMEM_VF610_OCOTP is not set
 
 #
 # HW tracing support
 #
 # CONFIG_STM is not set
 # CONFIG_INTEL_TH is not set
+# CONFIG_HISI_PTT is not set
 # end of HW tracing support
 
 # CONFIG_FPGA is not set
@@ -3922,7 +4539,13 @@ CONFIG_CRYPTO_POLY1305_X86_64=y
 # end of Accelerated Cryptographic Algorithms for CPU (x86)
 
 CONFIG_CRYPTO_HW=y
+# CONFIG_CRYPTO_DEV_ALLWINNER is not set
 # CONFIG_CRYPTO_DEV_PADLOCK is not set
+# CONFIG_CRYPTO_DEV_EXYNOS_RNG is not set
+# CONFIG_CRYPTO_DEV_S5P is not set
+# CONFIG_CRYPTO_DEV_ATMEL_AES is not set
+# CONFIG_CRYPTO_DEV_ATMEL_TDES is not set
+# CONFIG_CRYPTO_DEV_ATMEL_SHA is not set
 # CONFIG_CRYPTO_DEV_ATMEL_ECC is not set
 # CONFIG_CRYPTO_DEV_ATMEL_SHA204A is not set
 # CONFIG_CRYPTO_DEV_CCP is not set
@@ -3933,10 +4556,25 @@ CONFIG_CRYPTO_HW=y
 # CONFIG_CRYPTO_DEV_QAT_DH895xCCVF is not set
 # CONFIG_CRYPTO_DEV_QAT_C3XXXVF is not set
 # CONFIG_CRYPTO_DEV_QAT_C62XVF is not set
+# CONFIG_CAVIUM_CPT is not set
 # CONFIG_CRYPTO_DEV_NITROX_CNN55XX is not set
+# CONFIG_CRYPTO_DEV_OCTEONTX_CPT is not set
+# CONFIG_CRYPTO_DEV_CAVIUM_ZIP is not set
+# CONFIG_CRYPTO_DEV_QCE is not set
+# CONFIG_CRYPTO_DEV_QCOM_RNG is not set
+# CONFIG_CRYPTO_DEV_IMGTEC_HASH is not set
+# CONFIG_CRYPTO_DEV_ZYNQMP_AES is not set
+# CONFIG_CRYPTO_DEV_ZYNQMP_SHA3 is not set
 # CONFIG_CRYPTO_DEV_VIRTIO is not set
 # CONFIG_CRYPTO_DEV_SAFEXCEL is not set
+# CONFIG_CRYPTO_DEV_HISI_SEC is not set
+# CONFIG_CRYPTO_DEV_HISI_SEC2 is not set
+# CONFIG_CRYPTO_DEV_HISI_ZIP is not set
+# CONFIG_CRYPTO_DEV_HISI_HPRE is not set
 # CONFIG_CRYPTO_DEV_AMLOGIC_GXL is not set
+# CONFIG_CRYPTO_DEV_SA2UL is not set
+# CONFIG_CRYPTO_DEV_KEEMBAY_OCS_AES_SM4 is not set
+# CONFIG_CRYPTO_DEV_ASPEED is not set
 CONFIG_ASYMMETRIC_KEY_TYPE=y
 CONFIG_ASYMMETRIC_PUBLIC_KEY_SUBTYPE=y
 CONFIG_X509_CERTIFICATE_PARSER=y
@@ -4080,6 +4718,8 @@ CONFIG_ARCH_HAS_UACCESS_FLUSHCACHE=y
 CONFIG_ARCH_HAS_COPY_MC=y
 CONFIG_ARCH_STACKWALK=y
 CONFIG_SBITMAP=y
+# CONFIG_PARMAN is not set
+# CONFIG_OBJAGG is not set
 # end of Library routines
 
 #
@@ -4336,6 +4976,7 @@ CONFIG_PROBE_EVENTS=y
 CONFIG_FTRACE_MCOUNT_RECORD=y
 CONFIG_FTRACE_MCOUNT_USE_CC=y
 # CONFIG_SYNTH_EVENTS is not set
+# CONFIG_USER_EVENTS is not set
 # CONFIG_HIST_TRIGGERS is not set
 # CONFIG_TRACE_EVENT_INJECT is not set
 # CONFIG_TRACEPOINT_BENCHMARK is not set
@@ -4366,7 +5007,6 @@ CONFIG_EARLY_PRINTK=y
 # CONFIG_EFI_PGT_DUMP is not set
 # CONFIG_DEBUG_TLBFLUSH is not set
 CONFIG_HAVE_MMIOTRACE_SUPPORT=y
-# CONFIG_X86_DECODER_SELFTEST is not set
 CONFIG_IO_DELAY_0X80=y
 # CONFIG_IO_DELAY_0XED is not set
 # CONFIG_IO_DELAY_UDELAY is not set
@@ -4402,4 +5042,7 @@ CONFIG_ARCH_USE_MEMTEST=y
 # Rust hacking
 #
 # end of Rust hacking
+
+# CONFIG_WARN_MISSING_DOCUMENTS is not set
+# CONFIG_WARN_ABI_ERRORS is not set
 # end of Kernel hacking
